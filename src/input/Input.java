@@ -14,16 +14,15 @@ public class Input {
     // Intiialize the input
     public void initializeInputValue() {
         System.out.println(
-                "====================================================================================================================================");
+                "========================================================================================================================");
 
         // Initialize scanner
         Scanner sc = new Scanner(System.in);
 
         // Get start word
+        System.out.println();
         System.out.print("Enter the start word: ");
         this.startInput = sc.nextLine();
-        System.out.println();
-
         // Validate start word
         while (!Utils.isAlphabetic(this.startInput) // Check if the start word is alphabetic
                 || this.startInput.length() == 0 // Check if the start word is not empty
@@ -38,15 +37,15 @@ public class Input {
                 System.out.println("The start word must not be in the dictionary!");
 
             // Get new start word
+            System.out.println();
             System.out.print("Enter the start word: ");
             this.startInput = sc.nextLine();
-            System.out.println();
         }
 
         // Get end word
+        System.out.println();
         System.out.print("Enter the end word: ");
         this.endInput = sc.nextLine();
-        System.out.println();
 
         // Validation end word
         while (!Utils.isAlphabetic(this.endInput) // Check if the end word is alphabetic
@@ -65,22 +64,22 @@ public class Input {
                 System.out.println("The end word must not be the same as the start word!");
 
             // Get new end word
+            System.out.println();
             System.out.print("Enter the end word: ");
             this.endInput = sc.nextLine();
-            System.out.println();
         }
 
         // Get method
         // 1. Uniform Cost Search (UCS)
         // 2. Greedy Best First Search (GBFS)
         // 3. A* Search
+        System.out.println();
         System.out.println("Choose the method:");
         System.out.println("1. Uniform Cost Search (UCS)");
         System.out.println("2. Greedy Best First Search (GBFS)");
         System.out.println("3. A* Search");
         System.out.print("Enter the method: ");
         String methodInputStr = sc.nextLine();
-        System.out.println();
 
         // Validate method
         // Must be 1, 2, or 3 and a integer
@@ -94,17 +93,18 @@ public class Input {
                 System.out.println("The method must be 1, 2, or 3!");
 
             // Get new method
+            System.out.println();
             System.out.print("Enter the method: ");
             methodInputStr = sc.nextLine();
-            System.out.println();
         }
         this.methodInput = Integer.parseInt(methodInputStr);
 
         // Close scanner
         sc.close();
 
+        System.out.println();
         System.out.println(
-                "====================================================================================================================================");
+                "========================================================================================================================");
     }
 
     // Getter
