@@ -9,16 +9,19 @@ import solve.search.GBFS;
 import solve.search.UCS;
 
 public class Solve {
+    // Store solution
     private List<String> solution;
     private int totalNodeTraversed;
     private double duration;
 
+    // Constructor
     public Solve() {
         this.solution = new ArrayList<>();
         this.totalNodeTraversed = 0;
         this.duration = 0;
     }
 
+    // Calculate solution
     public void calculateSolution(Input inputValue) {
         // Get start word
         String startWord = inputValue.getStartInput();
@@ -60,14 +63,18 @@ public class Solve {
         this.duration = (endTime - startTime) / 1000000.0;
     }
 
+    // Getters
+    // Get solution
     public List<String> getSolution() {
         return this.solution;
     }
 
+    // Get total node traversed
     public int getTotalNodeTraversed() {
         return this.totalNodeTraversed;
     }
 
+    // Get duration
     public double getDuration() {
         return this.duration;
     }

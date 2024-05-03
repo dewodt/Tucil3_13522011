@@ -2,6 +2,7 @@ package input;
 
 import java.util.Scanner;
 
+import dictionary.Dictionary;
 import lib.Utils;
 
 public class Input {
@@ -24,13 +25,17 @@ public class Input {
         System.out.println();
 
         // Validate start word
-        // Must be alphabetic and not empty
-        while (!Utils.isAlphabetic(this.startInput) || this.startInput.length() == 0) {
+        while (!Utils.isAlphabetic(this.startInput) // Check if the start word is alphabetic
+                || this.startInput.length() == 0 // Check if the start word is not empty
+                || !Dictionary.isWordInDictionary(startInput) // Check if the start word is in the dictionary
+        ) {
             // Message for invalid input
             if (!Utils.isAlphabetic(this.startInput))
                 System.out.println("The start word must be alphabetic!");
             else if (this.startInput.length() == 0)
                 System.out.println("The start word must not be empty!");
+            else if (!Dictionary.isWordInDictionary(startInput))
+                System.out.println("The start word must not be in the dictionary!");
 
             // Get new start word
             System.out.print("Enter the start word: ");
@@ -44,16 +49,18 @@ public class Input {
         System.out.println();
 
         // Validation end word
-        // Must be alphabetic, has the same length as the start word, and not the same
-        // as the start word
-        while (!Utils.isAlphabetic(this.endInput)
-                || this.endInput.length() != this.startInput.length()
-                || this.startInput.equals(this.endInput)) {
+        while (!Utils.isAlphabetic(this.endInput) // Check if the end word is alphabetic
+                || this.endInput.length() != this.startInput.length() // Check end word length vs the start word
+                || !Dictionary.isWordInDictionary(endInput) // Check if the end word is in the dictionary
+                || this.startInput.equals(this.endInput) // Check if the end word is not the same as the start word
+        ) {
             // Message
             if (!Utils.isAlphabetic(this.endInput))
                 System.out.println("The end word must be alphabetic!");
             else if (this.endInput.length() != this.startInput.length())
                 System.out.println("The end word must have the same length as the start word!");
+            else if (!Dictionary.isWordInDictionary(endInput))
+                System.out.println("The end word must be in the dictionary!");
             else if (this.startInput.equals(this.endInput))
                 System.out.println("The end word must not be the same as the start word!");
 
@@ -77,8 +84,9 @@ public class Input {
 
         // Validate method
         // Must be 1, 2, or 3 and a integer
-        while (!Utils.isNumeric(methodInputStr)
-                || (Integer.parseInt(methodInputStr) < 1 || Integer.parseInt(methodInputStr) > 3)) {
+        while (!Utils.isNumeric(methodInputStr) // Check if the method is a number
+                || (Integer.parseInt(methodInputStr) < 1 || Integer.parseInt(methodInputStr) > 3) // 1 <= x <= 3
+        ) {
             // Message
             if (!Utils.isNumeric(methodInputStr))
                 System.out.println("The method must be a number!");

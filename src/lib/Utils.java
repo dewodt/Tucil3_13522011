@@ -1,11 +1,5 @@
 package lib;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Utils {
     // Check if the string is numeric
     public static boolean isNumeric(final String str) {
@@ -32,31 +26,5 @@ public class Utils {
             }
         }
         return count;
-    }
-
-    // Read from dictionary and filter for usable words (word that has the same
-    // length as the input star / finish word)
-    public static List<String> getUsableWordsFromDictionary(int startFinishWordLength) {
-        // Initialize dictionary
-        List<String> usableDictionaryWords = new ArrayList<>();
-
-        // Read file
-        try {
-            File file = new File("./dictionary/words_alpha.txt");
-            Scanner sc = new Scanner(file);
-            while (sc.hasNextLine()) {
-                String word = sc.nextLine();
-                if (word.length() == startFinishWordLength) {
-                    usableDictionaryWords.add(word);
-                }
-            }
-            sc.close();
-        } catch (FileNotFoundException e) {
-            // File not found
-            System.out.println("An error occurred: file not found");
-            e.printStackTrace();
-        }
-
-        return usableDictionaryWords;
     }
 }
