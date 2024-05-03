@@ -61,7 +61,7 @@ rm -rf bin/*
 
 ## Usage
 
-![Demo Illustration](https://github.com/dewodt/Tucil3_13522011/tree/main/test/readme/demo.png)
+![Demo Illustration](test/readme/demo.png)
 
 1. Input start word
 2. Input end word
