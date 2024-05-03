@@ -1,6 +1,32 @@
-package initialize;
+package output;
 
-public class Initialize {
+import solve.Solve;
+
+public class Output {
+    // Method to print result values
+    public static void printResult(final Solve result) {
+
+        System.out.println(
+                "====================================================================================================================================");
+        System.out.println();
+
+        // Words
+        System.out.println("Result: ");
+        for (int i = 0; i < result.getSolution().size(); i++) {
+            System.out.println(i + 1 + " " + result.getSolution().get(i));
+        }
+        // Total node traversed
+        System.out.println("Total node traversed: " + result.getTotalNodeTraversed());
+        // Duration
+        System.out.println("Duration: " + result.getDuration() + " ms");
+
+        System.out.println();
+        System.out.println(
+                "====================================================================================================================================");
+
+    }
+
+    // Method to print welcome message
     public static void printWelcomeMessage() {
         System.out.println(
                 "====================================================================================================================================");

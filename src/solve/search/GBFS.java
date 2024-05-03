@@ -1,4 +1,4 @@
-package solve;
+package solve.search;
 
 import lib.Utils;
 

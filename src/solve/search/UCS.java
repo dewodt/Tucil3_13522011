@@ -1,4 +1,4 @@
-package solve;
+package solve.search;
 
 public class UCS extends Search {
     public UCS() {

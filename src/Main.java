@@ -1,21 +1,23 @@
-import initialize.Initialize;
 import input.Input;
+import output.Output;
 import solve.Solve;
 
 public class Main {
     public static void main(String[] args) {
-        // Print initial message
-        Initialize.printWelcomeMessage();
+        // Print welcome message
+        Output.printWelcomeMessage();
 
-        // Input values
+        // Get input values
+        // input object stores the input values
         Input input = new Input();
         input.initializeInputValue();
 
-        // Solve
+        // Get the solution
+        // solve object stores the solution values
         Solve solve = new Solve();
         solve.calculateSolution(input);
 
         // Output result
-        solve.printResult();
+        Output.printResult(solve);
     }
 }

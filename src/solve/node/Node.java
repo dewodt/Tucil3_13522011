@@ -1,4 +1,4 @@
-package solve;
+package solve.node;
 
 import java.util.Comparator;
 

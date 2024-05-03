@@ -1,4 +1,4 @@
-package solve;
+package solve.search;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 import lib.Utils;
+import solve.node.Node;
 
 public abstract class Search {
     private Node solutionNode;

@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import input.Input;
+import solve.search.AStar;
+import solve.search.GBFS;
+import solve.search.UCS;
 
 public class Solve {
     private List<String> solution;
@@ -67,23 +70,5 @@ public class Solve {
 
     public double getDuration() {
         return this.duration;
-    }
-
-    public void printResult() {
-        System.out.println(
-                "====================================================================================================================================");
-        System.out.println();
-
-        System.out.println("Result: ");
-        for (int i = 0; i < this.solution.size(); i++) {
-            System.out.println(i + 1 + " " + this.solution.get(i));
-        }
-        System.out.println("Total node traversed: " + this.totalNodeTraversed);
-        System.out.println("Duration: " + this.duration + " ms");
-
-        System.out.println();
-        System.out.println(
-                "====================================================================================================================================");
-
     }
 }
