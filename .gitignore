@@ -1,5 +1,6 @@
 # Compiled class file
-*.class
+# .class unignored as assigment requires it
+# *.class
 
 # Log file
 *.log
