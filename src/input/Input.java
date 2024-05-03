@@ -22,7 +22,7 @@ public class Input {
         // Get start word
         System.out.println();
         System.out.print("Enter the start word: ");
-        this.startInput = sc.nextLine();
+        this.startInput = sc.nextLine().toLowerCase();
         // Validate start word
         while (!Utils.isAlphabetic(this.startInput) // Check if the start word is alphabetic
                 || this.startInput.length() == 0 // Check if the start word is not empty
@@ -39,13 +39,13 @@ public class Input {
             // Get new start word
             System.out.println();
             System.out.print("Enter the start word: ");
-            this.startInput = sc.nextLine();
+            this.startInput = sc.nextLine().toLowerCase();
         }
 
         // Get end word
         System.out.println();
         System.out.print("Enter the end word: ");
-        this.endInput = sc.nextLine();
+        this.endInput = sc.nextLine().toLowerCase();
 
         // Validation end word
         while (!Utils.isAlphabetic(this.endInput) // Check if the end word is alphabetic
@@ -66,7 +66,7 @@ public class Input {
             // Get new end word
             System.out.println();
             System.out.print("Enter the end word: ");
-            this.endInput = sc.nextLine();
+            this.endInput = sc.nextLine().toLowerCase();
         }
 
         // Get method
@@ -74,7 +74,7 @@ public class Input {
         // 2. Greedy Best First Search (GBFS)
         // 3. A* Search
         System.out.println();
-        System.out.println("Choose the method:");
+        System.out.println("Choose the method: ");
         System.out.println("1. Uniform Cost Search (UCS)");
         System.out.println("2. Greedy Best First Search (GBFS)");
         System.out.println("3. A* Search");
