@@ -34,7 +34,9 @@ public abstract class Search {
         }
 
         // Initialize start node
-        Node startNode = new Node(startWord, 0, 0, null);
+        int startDepth = 0;
+        int startCost = calculateCost(startDepth, startWord, endWord);
+        Node startNode = new Node(startWord, startCost, startDepth, null);
 
         // Initialize solution data
         this.totalNodeTraversed = 0;
