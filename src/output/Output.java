@@ -4,7 +4,7 @@ import java.util.List;
 
 import solve.Solve;
 
-public class Output {
+public abstract class Output {
 	// Method to print result values
 	public static void printResult(final Solve result) {
 		System.out.println(
@@ -24,7 +24,7 @@ public class Output {
 
 		// Total node traversed
 		System.out.println("Total node traversed: " + result.getTotalNodeTraversed());
-		
+
 		// Duration
 		System.out.println("Duration: " + result.getDuration() + " ms");
 

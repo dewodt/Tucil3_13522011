@@ -1,6 +1,6 @@
 package lib;
 
-public class Utils {
+public abstract class Utils {
     // Check if the string is numeric
     public static boolean isNumeric(final String str) {
         try {
