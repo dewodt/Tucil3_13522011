@@ -66,7 +66,6 @@ public class Solve {
         // Calculate memory usage
         Runtime rt = Runtime.getRuntime();
         long memory = rt.totalMemory() - rt.freeMemory();
-        System.out.println("Memory used: " + memory / 1024 + " KB");
         this.memoryUsed = memory / 1024;
     }
 
