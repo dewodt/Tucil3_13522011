@@ -34,7 +34,7 @@ public class Input {
             else if (this.startInput.length() == 0)
                 System.out.println("The start word must not be empty!");
             else if (!Dictionary.isWordInDictionary(startInput))
-                System.out.println("The start word must not be in the dictionary!");
+                System.out.println("The start word be in the dictionary!");
 
             // Get new start word
             System.out.println();

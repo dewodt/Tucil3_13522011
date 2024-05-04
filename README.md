@@ -69,6 +69,10 @@ rm -rf bin/*
 4. Wait for result
 5. Enjoy!
 
+# Reference
+
+The dictionary used in this program is obtained from this [repository](https://github.com/dwyl/english-words).
+
 ## Contact
 
 Created by [@dewodt](https://dewodt.com/) - feel free to contact me!
