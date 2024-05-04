@@ -13,6 +13,7 @@ public class Solve {
     private List<String> solution;
     private int totalNodeTraversed;
     private double duration;
+    private long memoryUsed;
 
     // Constructor
     public Solve() {
@@ -61,6 +62,12 @@ public class Solve {
 
         // Calculate duration
         this.duration = (endTime - startTime) / 1000000.0;
+
+        // Calculate memory usage
+        Runtime rt = Runtime.getRuntime();
+        long memory = rt.totalMemory() - rt.freeMemory();
+        System.out.println("Memory used: " + memory / 1024 + " KB");
+        this.memoryUsed = memory / 1024;
     }
 
     // Getters
@@ -77,5 +84,10 @@ public class Solve {
     // Get duration
     public double getDuration() {
         return this.duration;
+    }
+
+    // Get memory used
+    public long getMemoryUsed() {
+        return this.memoryUsed;
     }
 }

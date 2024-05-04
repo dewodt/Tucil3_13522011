@@ -28,6 +28,9 @@ public abstract class Output {
 		// Duration
 		System.out.println("Duration: " + result.getDuration() + " ms");
 
+		// Memory used
+		System.out.println("Memory used: " + result.getMemoryUsed() + " KB");
+
 		System.out.println();
 		System.out.println(
 				"========================================================================================================================");
